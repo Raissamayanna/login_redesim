@@ -1,23 +1,23 @@
-Funcionalidade: Menu do site
+Feature: Menu do site
     Opções do menu
 
-Cenário:  All Items
-    Dado que estou logado no sistema
-    Quando clico no menu "All Items"
-    Então devo ser redirecionado para a página de "produtos"
+Scenario:  All Items
+    Given que estou logado no sistema
+    When clico no menu "All Items"
+    Then devo ser redirecionado para a página de "produtos"
 
-Cenário: About
-    Dado que estou logado no sistema
-    Quando clico no menu "About"
-    Então devo ser redirecionado para a página de "site Sause Labs"
+Scenario: About
+    Given que estou logado no sistema
+    When clico no menu "About"
+    Then devo ser redirecionado para a página de "site Sause Labs"
 
-Cenário:  logout
-    Dado que estou logado no sistema
-    Quando clico no menu "logout"
-    Então devo ser deslogado do sistema 
-    E devo ser redirecionado para a página de "login"
+Scenario:  logout
+    Given que estou logado no sistema
+    When clico no menu "logout"
+    Then devo ser deslogado do sistema 
+    And devo ser redirecionado para a página de "login"
 
-Cenário:  Reset App State
-    Dado que estou logado no sistema
-    Quando clico no menu "Reset App State"
-    Então deve limpar o carrinho de compras
+Scenario:  Reset App State
+    Given que estou logado no sistema
+    When clico no menu "Reset App State"
+    Then deve limpar o carrinho de compras

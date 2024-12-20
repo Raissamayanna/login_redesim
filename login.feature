@@ -1,34 +1,34 @@
-Funcionalidade: Autenticação
+Feature: Autenticação
   Como usuário do site Swag Labs
   Desejo fazer login, e acessar a página de produtos
 
-Cenário: Acesso sem usuário e senha
-  Dado que estou na página de login
-  Quando clico no botão "login"
-  Então deve aparecer a mensagem de erro "Epic sadface: Username is required"
+Scenario: Acesso sem usuário e senha
+  Given que estou na página de login
+  When clico no botão login
+  Then deve aparecer a mensagem de erro "Epic sadface: Username is required"
 
-Cenário: Acesso com usuário válido e sem senha 
-  Dado que estou na página de login
-  Quando Digito o usuário "standard_user"
-  E clico no botão "login"
-  Então deve aparecer a mensagem de erro "Epic sadface: Password is required"
+Scenario: Acesso com usuário válido e sem senha 
+  Given que estou na página de login
+  When Digito o usuário "standard_user"
+  And clico no botão login
+  Then deve aparecer a mensagem de erro "Epic sadface: Password is required"
 
-Cenário: Acesso com senha sem usuário
-  Dado que estou na página de login
-  Quando Digito a senha "secret_sauce"
-  E clico no botão "Login"
-  Então deve aparecer a mensagem de erro "Epic sadface: Username is required"
+Scenario: Acesso com senha sem usuário
+  Given que estou na página de login
+  When Digito a senha "secret_sauce"
+  And clico no botão login
+  Then deve aparecer a mensagem de erro "Epic sadface: Username is required"
 
-Cenário: Acesso com usuário e com senha válidos 
-  Dado que estou na página de login
-  Quando digito o usuário "standard_user"
-  E digito a senha "secret_sauce"
-  E clico no botão "login"
-  Então deve ser redirecionado para a página de "produtos"
+Scenario: Acesso com usuário e com senha válidos 
+  Given que estou na página de login
+  When digito o usuário "standard_user"
+  And digito a senha "secret_sauce"
+  And clico no botão login
+  Then deve ser redirecionado para a página de "produtos"
 
-Cenário: Acesso com usuário e com senha inválidos
-  Dado que estou na página de login
-  Quando digito o usuário "raissa"
-  E digito senha "123"
-  E clico no botão "login"
-  Então deve aparecer a mensagem de erro "Epic sadface: Username and password do not match any user in this service"
+Scenario: Acesso com usuário e com senha inválidos
+  Given que estou na página de login
+  When digito o usuário "raissa"
+  And digito senha "123"
+  And clico no botão login
+  Then deve aparecer a mensagem de erro "Epic sadface: Username and password do not match any user in this service"

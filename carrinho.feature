@@ -1,17 +1,17 @@
-Funcionalidade: Carrinho
+Feature: Carrinho
     Selecionar Produtos escolhidos
 
-Cenário: Remover Produto do Carrinho
-    Dado que estou na página de carrinho
-    Quando clico no botão "remove"
-    Então o produto deve ser removido do carrinho
+Scenario: Remover Produto do Carrinho
+    Given que estou na página de carrinho
+    When clico no botão remove
+    Then o produto deve ser removido do carrinho
 
-Cenário: Botão continue shopping
-    Dado que estou na página de carrinho
-    Quando clico no botão "continue shopping"
-    Então devo ser redirecionado para a página de "produtos"
+Scenario: Botão continue shopping
+    Given que estou na página de carrinho
+    When clico no botão continue shopping
+    Then devo ser redirecionado para a página de "produtos"
 
-Cenário: Botão checkout
-    Dado que estou na página de carrinho
-    Quando clico no botão "checkout"
-    Então devo ser redirecionado para a página de "checkout-step-one"
+Scenario: Botão checkout
+    Given que estou na página de carrinho
+    When clico no botão checkout
+    Then devo ser redirecionado para a página de "checkout-step-one"

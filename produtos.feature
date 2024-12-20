@@ -1,30 +1,30 @@
-Funcionalidade: inventory
+Feature: inventory
     Tela de produtos do inventory
 
-Esquema do Cenário: Ordenação dos Produtos
-    Dado que estou na tela de produtos do inventory
-    Quando eu ordeno os produtos por <ordem>
-    Então deve ordenar os produtos por <resultado>
+Scenario: Ordenação dos Produtos
+    Given que estou na tela de produtos do inventory
+    When eu ordeno os produtos por <ordem>
+    Then deve ordenar os produtos por <resultado>
 
-    Exemplos:
+    Examples:
     | ordem                 | resultado                      |
     | "Name (A to Z)"       | "Ordem alfabetica crescente"   |
     | "Name (Z to A)"       | "Ordem alfabetica decrescente" |
     | "Price (low to high)" | "Preço crescente"              |
     | "Price (high to low)" | "Preço decrescente"            |
 
-Cenário: Selecionar Produto Especifico 
-    Dado que estou na tela de produtos do inventory
-    Quando seleciono o produto desejado
-    Então deve carregar uma nova página e exibir as informações do produto selecionado
+Scenario: Selecionar Produto Especifico 
+    Given que estou na tela de produtos do inventory
+    When seleciono o produto desejado
+    Then deve carregar uma nova página e exibir as informações do produto selecionado
 
-Cenário: Adcionar Produto ao Carrinho
-    Dado que estou na tela de produtos do inventory
-    Quando eu adiciono o produto ao carrinho
-    Então deve adcionar a quantidade do produto no carrinho
+Scenario: Adcionar Produto ao Carrinho
+    Given que estou na tela de produtos do inventory
+    When eu adiciono o produto ao carrinho
+    Then deve adcionar a quantidade do produto no carrinho
 
-Cenário: Remover produto do carrinho
-    Dado que estou na tela de produtos do inventory
-    Quando ciclo no botão de Remove 
-    Então deve remover o produto do carrinho
-    E deve subtrair a quantidade de produtos
+Scenario: Remover produto do carrinho
+    Given que estou na tela de produtos do inventory
+    When ciclo no botão de Remove 
+    Then deve remover o produto do carrinho
+    And deve subtrair a quantidade de produtos

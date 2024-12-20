@@ -1,18 +1,18 @@
-Funcionalidade:  inventory-item
+Feature:  inventory-item
     informações do produto selecionado
 
-Cenário: Adicionar produto ao carrinho
-    Dado que estou na página de um produto Especifico
-    Quando clico no botão "Add to cart"
-    Então o produto é adicionado ao carrinho
+Scenario: Adicionar produto ao carrinho
+    Given que estou na página de um produto Especifico
+    When clico no botão Add to cart
+    Then o produto é adicionado ao carrinho
 
-Cenário: Remover produto do carrinho
-    Dado que estou na página de um produto Especifico
-    E o produto está no carrinho
-    Quando clico no botão "Remove"
-    Então o produto é removido do carrinho
+Scenario: Remover produto do carrinho
+    Given que estou na página de um produto Especifico
+    And o produto está no carrinho
+    When clico no botão Remove
+    Then o produto é removido do carrinho
 
-Cenário: Botão de voltar a página 
-    Dado que estou na página de um produto Especifico
-    Quando clico no botão "Back"
-    Então a página é redirecionada para a página anterior
+Scenario: Botão de voltar a página 
+    Given que estou na página de um produto Especifico
+    When clico no botão Back
+    Then a página é redirecionada para a página anterior

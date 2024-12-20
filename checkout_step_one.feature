@@ -1,25 +1,25 @@
-Funcionalidade: checkout-step-one
+Feature: checkout-step-one
     informações pessoais do usuário
 
-Cenário: Acesso com nome, sobrenome e ZIP/POSTAL CODE
-    Dado que o usuário está na página de checkout
-    Quando o usuário preencher o campo "first name" com "raissa"
-    E o usuário preencher o campo "last name" com "silva"
-    E o usuário preencher o campo "ZIP/POSTAL CODE" com "12345"
-    E clico no botão "Continue"
-    Então devo ser redirecionado para a página de "checkout-step-two"
+Scenario: Acesso com nome, sobrenome e ZIP/POSTAL CODE
+    Given que o usuário está na página de checkout
+    When o usuário preencher o campo "first name" com "raissa"
+    And o usuário preencher o campo "last name" com "silva"
+    And o usuário preencher o campo "ZIP/POSTAL CODE" com "12345"
+    And clico no botão Continue
+    Then devo ser redirecionado para a página de "checkout-step-two"
 
-Cenário: Botão Cancel
-    Dado que o usuário está na página de checkout
-    Quando o usuário clicar em "cancel"
-    Então devo ser redirecionado para a página de "carrinho de compras"
+Scenario: Botão Cancel
+    Given que o usuário está na página de checkout
+    When o usuário clicar em "cancel"
+    Then devo ser redirecionado para a página de "carrinho de compras"
 
-Esquema do Cenário: Avançar sem preenchimento de campos
-    Dado que o usuário está na página de checkout
-    Quando avanço sem preencher os campos <campo>
-    Então deve aparecer a mensagem de erro <mensagem>
+Scenario: Avançar sem preenchimento de campos
+    Given que o usuário está na página de checkout
+    When avanço sem preencher os campos <campo>
+    Then deve aparecer a mensagem de erro "<mensagem>"
 
-    Exemplos:
+    Examples:
     | campo                                    | mensagem                          |
     | "First Name, Last Name, Zip/Postal Code" | "Error: First Name is required"   |
     | "First Name, Last Name"                  | "Error: First Name is required"   |
