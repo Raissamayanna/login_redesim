@@ -16,7 +16,7 @@ Esquema do Cenário: Ordenação dos Produtos
 Cenário: Selecionar Produto Especifico 
     Dado que estou na tela de produtos do inventory
     Quando seleciono o produto desejado
-    Então deve exibir as informações do produto selecionado
+    Então deve carregar uma nova página e exibir as informações do produto selecionado
 
 Cenário: Adcionar Produto ao Carrinho
     Dado que estou na tela de produtos do inventory

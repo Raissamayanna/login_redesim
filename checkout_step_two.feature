@@ -3,11 +3,11 @@ Funcionalidade: checkout-step-two
     
 Cenário: Finalizar pedido
     Dado que estou na página de checkout
-    Quando eu clicar no botão "FINISH"
+    Quando clico no botão "FINISH"
     Então deve concluir a compra 
     E aparecer a mensagem "THANK YOU FOR YOUR ORDER"
 
 Cenário: Botão Cancel
     Dado que estou na página de checkout
-    Quando eu clicar no botão "CANCEL"
-    Então deve redirecionar para a página de produtos
+    Quando clico no botão "CANCEL"
+    Então devo ser redirecionado para a página de "produtos"
