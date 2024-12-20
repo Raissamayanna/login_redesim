@@ -1,0 +1,19 @@
+Bug 01: Site não esta voltando status do botão de "Remuve" para "Add to cart"
+    Cenário:  Reset App State
+        Dado que estou logado no sistema
+        Quando clico no Reset App State
+        Então deve limpar o carrinho de compras
+
+    Obs: Ao executar o cenário acima o botão remove continua aparecendo ao invés de voltar para o botão Add to cart na página de produtos.
+
+Bug 02: Botão de redes sociais não está clicavél no rodapé do Site
+        Quando clico no botão de redes sociais no rodapé do site, não esta acontecendo nada, deveria redirecionar para as páginas das redes sociais da Souce Labs.
+
+
+Bug 03: Falta de páginação dos produtos
+    Foi verificado que há mais produtos disponíveis na página de produtos, porém não há páginação para acessar os produtos restantes.
+
+    Obs: Isso foi verificado ao ordenar os itens da páginas.
+
+Bug 04: Botão de quantidade de produtos não está editável
+        Quando clico dentro de quantidade de produtos ele não esta funcionando, não esta aumentando ou diminuindo a quantidade de produtos.
