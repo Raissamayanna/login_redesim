@@ -15,4 +15,4 @@ Cenário: Remover produto do carrinho
 Cenário: Botão de voltar a página 
     Dado que estou na página de um produto Especifico
     Quando clico no botão "Back"
-    Então a página é redirecionada para a página anterior.
+    Então a página é redirecionada para a página anterior

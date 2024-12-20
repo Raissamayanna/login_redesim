@@ -6,17 +6,18 @@ Cenário: Acesso com nome, sobrenome e ZIP/POSTAL CODE
     Quando o usuário preencher o campo "first name" com "raissa"
     E o usuário preencher o campo "last name" com "silva"
     E o usuário preencher o campo "ZIP/POSTAL CODE" com "12345"
-    Então o usuário pode avançar para a página "checkout-step-two"
+    E clico no botão "Continue"
+    Então devo ser redirecionado para a página de "checkout-step-two"
 
 Cenário: Botão Cancel
     Dado que o usuário está na página de checkout
     Quando o usuário clicar em "cancel"
-    Então o usuário é redirecionado para a página do carrinho de compras
+    Então devo ser redirecionado para a página de "carrinho de compras"
 
 Esquema do Cenário: Avançar sem preenchimento de campos
     Dado que o usuário está na página de checkout
     Quando avanço sem preencher os campos <campo>
-    Então deve aparecer a mensagem <mensagem>
+    Então deve aparecer a mensagem de erro <mensagem>
 
     Exemplos:
     | campo                                    | mensagem                          |
