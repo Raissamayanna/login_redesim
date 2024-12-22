@@ -27,12 +27,12 @@ Antes de começar, você precisará ter os seguintes programas instalados no seu
 Clone este repositório para o seu ambiente local.
 
 ```bash
-git clone https://github.com/usuario/projeto-cypress-cucumber.git
+git clone https://github.com/Raissamayanna/desafio-vox.git
 ```
 
 ###  2. Navegue até o diretório do projeto
 ```bash
-cd projeto-cypress-cucumber
+cd desafio-vox
 ```
 ### 3. Instale as dependências
 ```bash
