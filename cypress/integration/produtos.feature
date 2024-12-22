@@ -1,17 +1,16 @@
-Feature: inventory
+Feature: Inventory
     Tela de produtos do inventory
 
-Scenario: Ordenação dos Produtos
+Scenario Outline: Ordenação dos Produtos
     Given que estou na tela de produtos do inventory
     When eu ordeno os produtos por <ordem>
-    Then deve ordenar os produtos por <resultado>
-
+    Then deve ordenar os produtos
     Examples:
-    | ordem                 | resultado                      |
-    | "Name (A to Z)"       | "Ordem alfabetica crescente"   |
-    | "Name (Z to A)"       | "Ordem alfabetica decrescente" |
-    | "Price (low to high)" | "Preço crescente"              |
-    | "Price (high to low)" | "Preço decrescente"            |
+    | ordem  |
+    | "az"   |
+    | "za"   |
+    | "lohi" |
+    | "hilo" |
 
 Scenario: Selecionar Produto Especifico 
     Given que estou na tela de produtos do inventory
@@ -25,6 +24,6 @@ Scenario: Adcionar Produto ao Carrinho
 
 Scenario: Remover produto do carrinho
     Given que estou na tela de produtos do inventory
-    When ciclo no botão de Remove 
+    When clico no botão de Remove 
     Then deve remover o produto do carrinho
     And deve subtrair a quantidade de produtos

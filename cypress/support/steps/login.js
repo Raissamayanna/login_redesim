@@ -23,6 +23,3 @@ When("digito a senha {string}", (senha) => {
     loginPage.digitarSenha(senha);
 })
 
-Then("deve ser redirecionado para a página de produtos", () => {
-    loginPage.verificarRedirecionamento();
-})

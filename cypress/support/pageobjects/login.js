@@ -1,10 +1,8 @@
 /// <reference types="Cypress" />
 
 import LoginElements from '../elements/login'
-import ProductElements from '../elements/produtos'
 
 const loginElements = new LoginElements
-const productElements = new ProductElements
 const url = Cypress.config("baseUrl")
 
 class LoginPage {
@@ -30,12 +28,18 @@ class LoginPage {
     digitarSenha(senha) {
         cy.get(loginElements.password()).type(senha)
     }
-    
-    verificarRedirecionamento() {
-        cy.get(productElements.labelProduct()).should('be.visible')
+
+
+    logarSistema(user, senha) {
+        this.acessarSite();
+        this.digitarUsuario(user);
+        this.digitarSenha(senha);
+        this.clicarBotaoLogin();
     }
-    
+
+    verificarRedirecionamentoLogin() {
+        cy.url().should('include', '/index.html');
+    }
 }
-    
 
 export default LoginPage;

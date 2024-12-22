@@ -22,7 +22,7 @@ Feature: Autenticação
         When digito o usuário "standard_user"
         And digito a senha "secret_sauce"
         And clico no botão login
-        Then deve ser redirecionado para a página de produtos
+        Then devo ser redirecionado para a página de produtos
 
     Scenario: Acesso com usuário e com senha inválidos
         Given que estou na página de login
