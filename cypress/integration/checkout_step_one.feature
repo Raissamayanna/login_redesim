@@ -1,24 +1,23 @@
 Feature: checkout-step-one
     informações pessoais do usuário
 
-Scenario: Acesso com nome, sobrenome e ZIP/POSTAL CODE
-    Given que o usuário está na página de checkout
-    When o usuário preencher o campo "first name" com "raissa"
-    And o usuário preencher o campo "last name" com "silva"
-    And o usuário preencher o campo "ZIP/POSTAL CODE" com "12345"
-    And clico no botão Continue
-    Then devo ser redirecionado para a página de "checkout-step-two"
+Scenario: Avançar preenchendo todos os campos
+    Given que estou na tela de checkout
+    When preencho o campo "First name" com "raissa"
+    And preencho o campo "Last name" com "silva"
+    And preencho o campo "ZIP/POSTAL CODE" com "12345"
+    And clico no botão continue
+    Then devo ser redirecionado para a página de checkout-step-two
 
 Scenario: Botão Cancel
-    Given que o usuário está na página de checkout
-    When o usuário clicar em "cancel"
-    Then devo ser redirecionado para a página de "carrinho de compras"
+    Given que estou na tela de checkout
+    When clico no botão cancel
+    Then devo ser redirecionado para a página do carrinho
 
-Scenario: Avançar sem preenchimento de campos
-    Given que o usuário está na página de checkout
+Scenario Outline: Avançar sem preenchimento de campos
+    Given que estou na tela de checkout
     When avanço sem preencher os campos <campo>
-    Then deve aparecer a mensagem de erro "<mensagem>"
-
+    Then deve aparecer nesta tela de checkout a mensagem de erro <mensagem>
     Examples:
     | campo                                    | mensagem                          |
     | "First Name, Last Name, Zip/Postal Code" | "Error: First Name is required"   |
