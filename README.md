@@ -12,14 +12,6 @@ Antes de começar, você precisará ter os seguintes programas instalados no seu
 2. **NPM** (gerenciador de pacotes do Node.js):
    - O NPM é instalado automaticamente junto com o Node.js.
 
-3. **Cypress**:
-   - O Cypress é o framework de testes end-to-end que será utilizado para automação dos testes.
-   - A instalação será feita automaticamente ao instalar as dependências do projeto.
-
-4. **Cucumber** (com o plugin para Cypress):
-   - O Cucumber é uma ferramenta que permite escrever testes em uma linguagem amigável ao negócio.
-   - O plugin será instalado via NPM junto com as dependências do projeto.
-
 ## Instalação
 
 ### 1. Clone o repositório
