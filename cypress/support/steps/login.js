@@ -3,23 +3,19 @@
 import LoginPage from '../pageobjects/login'
 const loginPage = new LoginPage
 
-Given("que estou na página de login", () => {
+Given("que na estou na tela de autentaticação", () => {
     loginPage.acessarSite();
 })
 
-When("clico no botão login", () => {
-    loginPage.clicarBotaoLogin();
+When("digito login e senha válidos", () => {
+    loginPage.digitarUsuario("standard_user")
+    loginPage.digitarSenha("secret_sauce")
 })
 
-Then("deve aparecer a mensagem de erro {string}", (mensagem) => {
-    loginPage.mensagemErro(mensagem);
+When("clico no botão de login", () => {
+    loginPage.clicarBotaoLogin()
 })
 
-When("digito o usuário {string}", (user) => {
-    loginPage.digitarUsuario(user);
+Then("deve apresentar a mensagem de erro {string}", (mensagem) => {
+    loginPage.mensagemErro(mensagem)
 })
-
-When("digito a senha {string}", (senha) => {
-    loginPage.digitarSenha(senha);
-})
-

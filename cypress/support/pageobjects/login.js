@@ -10,15 +10,9 @@ class LoginPage {
     acessarSite() {
         cy.visit(url)
     }
-
-    // Clica no botão que acessa a página de login do site
+// Clica no botão que acessa a página de login do site
     clicarBotaoLogin() {
         cy.get(loginElements.botaoLogin()).click()
-    }
-  
-    // Verifica se o botão tem o texto "Esqueceu sua senha?"
-    mensagemErro(mensagem) {
-        cy.get(loginElements.mensagemErro()).should('contain', mensagem)
     }
 
     digitarUsuario(user) {
@@ -29,16 +23,8 @@ class LoginPage {
         cy.get(loginElements.password()).type(senha)
     }
 
-
-    logarSistema(user, senha) {
-        this.acessarSite();
-        this.digitarUsuario(user);
-        this.digitarSenha(senha);
-        this.clicarBotaoLogin();
-    }
-
-    verificarRedirecionamentoLogin() {
-        cy.url().should('include', '/index.html');
+     mensagemErro(mensagem) {
+        cy.get(loginElements.mensagemErro()).should('contain', mensagem)
     }
 }
 

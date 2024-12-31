@@ -31,28 +31,6 @@ cd desafio-vox
 npm install
 ```
 ### 4. Estrutura do Projeto
-```bash
-/desafio-vox
-    /cypress
-        /fixtures
-        /integration
-            .feature
-        /plugins
-            index.js
-        /support
-            /elements
-            /pageobjects
-            /steps
-            commands.js
-            index.js
-    /node_modules
-    .gitignore
-    Bugs.txt
-    cypress.config.js
-    cypress.json
-    package.json
-    README.md
-```
 * /integration: Contém os arquivos .feature escritos com a linguagem Gherkin.
 * /steps: Contém os arquivos JavaScript com a implementação dos steps do Cucumber.
 * cypress.json: Arquivo de configuração do Cypress.
